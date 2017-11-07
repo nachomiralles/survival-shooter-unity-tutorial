@@ -11,13 +11,13 @@ public class LoadingImageAndBar : MonoBehaviour {
 
     private AsyncOperation async;
 
-    public void LoadLevelAsync(string level)
+    public void LoadLevelAsync(int level)
     {
         loadingObject.SetActive(true);
         StartCoroutine(LoadTheLevel(level));
     }
 
-    IEnumerator LoadTheLevel(string level)
+    IEnumerator LoadTheLevel(int level)
     {
         async = SceneManager.LoadSceneAsync(level);
         
